@@ -1,0 +1,206 @@
+[debug] [2023-11-12T17:06:15.147Z] ----------------------------------------------------------------------
+[debug] [2023-11-12T17:06:15.149Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Drilon\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-11-12T17:06:15.149Z] CLI Version:   12.8.1
+[debug] [2023-11-12T17:06:15.149Z] Platform:      win32
+[debug] [2023-11-12T17:06:15.150Z] Node Version:  v18.16.0
+[debug] [2023-11-12T17:06:15.151Z] Time:          Sun Nov 12 2023 18:06:15 GMT+0100 (Central European Standard Time)
+[debug] [2023-11-12T17:06:15.151Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-12T17:06:15.220Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-12T17:06:15.221Z] > authorizing via signed-in user (saitid6@gmail.com)
+[debug] [2023-11-12T17:06:15.221Z] [iam] checking project exercises-app-56 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-12T17:06:15.223Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions [none]
+[debug] [2023-11-12T17:06:15.223Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions x-goog-quota-user=projects/exercises-app-56
+[debug] [2023-11-12T17:06:15.223Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-12T17:06:16.351Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions 200
+[debug] [2023-11-12T17:06:16.351Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-12T17:06:16.352Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exercises-app-56 [none]
+[debug] [2023-11-12T17:06:16.902Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exercises-app-56 200
+[debug] [2023-11-12T17:06:16.902Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exercises-app-56 {"projectId":"exercises-app-56","projectNumber":"859422050410","displayName":"exercises-app","name":"projects/exercises-app-56","resources":{"hostingSite":"exercises-app-56"},"state":"ACTIVE","etag":"1_68280dac-1289-4a90-b538-d33dabbe17cd"}
+[info] 
+[info] === Deploying to 'exercises-app-56'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-11-12T17:06:16.907Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/exercises-app-56/versions [none]
+[debug] [2023-11-12T17:06:16.907Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/exercises-app-56/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-11-12T17:06:18.284Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/exercises-app-56/versions 200
+[debug] [2023-11-12T17:06:18.284Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/exercises-app-56/versions {"name":"projects/859422050410/sites/exercises-app-56/versions/0dc87c2e9041a4d4","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[exercises-app-56]: beginning deploy... 
+[info] i  hosting[exercises-app-56]: found 25 files in build 
+[debug] [2023-11-12T17:06:18.295Z] [hosting] uploading with 200 concurrency
+[debug] [2023-11-12T17:06:18.300Z] [hosting] hash cache [YnVpbGQ] stored for 25 files
+[debug] [2023-11-12T17:06:18.300Z] [hosting][hash queue][FINAL] {"max":2,"min":0,"avg":0,"active":0,"complete":25,"success":25,"errored":0,"retried":0,"total":25,"elapsed":4}
+[debug] [2023-11-12T17:06:18.300Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/859422050410/sites/exercises-app-56/versions/0dc87c2e9041a4d4:populateFiles [none]
+[debug] [2023-11-12T17:06:18.300Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/859422050410/sites/exercises-app-56/versions/0dc87c2e9041a4d4:populateFiles {"files":{"/asset-manifest.json":"62a62d84671be1d9f2b218dc8da7763459bbe1d6fce67d5401c8758aea63c885","/bulgarian-split - Trim.mp4":"edb938456c4925cf22c8b1b48aacb7b95635a09af6a5e0b6b22feeb7c3f9e99c","/bulgariansplit.mp4":"928e6f22602187eb46e932b894cf32c705522bf6a090fc2a6f699865a73a7e80","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/fire-hydrants - Trim.mp4":"6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9","/glutes-birdge - Trim.mp4":"601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99","/hip thruts.mp4":"9d362a75f0eeed5b2046b7a517d9e937c26e6913fbe87a56703b1268baacf837","/hipthrutsreal.mp4":"03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab","/index.html":"3fa8c19d67b10564003cd17a79f71bda944319e8fb464f16cb54ebbd790d6ed5","/kickbacks.png":"794183cfe3a5c0b4be859fa30278f25c269ea0c5e87b750e6be525909f9c6a01","/last-three.mp3":"b2afe20ea6ad5205f6d2e0d23bf8990ea6884bfe282dcf58cf327a684d986995","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/romanian-deadlift - Trim.mp4":"ae770bd24b266224fc28ce5878887f5b97766a20a02b3f0a6ce6d615e099a8be","/side.mp4":"a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5","/stepups.mp4":"ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09","/static/css/main.0d46b285.css":"224295d2a6fd7d717375701087606cbda7797c483e7e156b0bc2c99db9e09094","/static/css/main.0d46b285.css.map":"70cf67475de07d8f988d9e5d54d22696e43e8c8578b86b0524b931b4f9295294","/static/js/787.49b3cd8f.chunk.js":"54f5dbb82c4fb36e6ec56691aa7c64a146a87a0bebb1f8f29c96e0ccf0042c0a","/static/js/787.49b3cd8f.chunk.js.map":"6c6b020f8849b7915dc46e7dd57f44e3e92b9e54f570e30ef2caf027f8084897","/static/js/main.46dcc8f0.js":"ca4b91170d98b986d73f76f96c4efe247fd76f9eac03ddff069df49152c43957","/static/js/main.46dcc8f0.js.LICENSE.txt":"e4bfa3d89c21846820163621ed2d1d79fb8f253962410109d054bad3fd090696","/static/js/main.46dcc8f0.js.map":"e89250b11b70c06875dfd2a0d32f122c102fe007c47a368b1bee77a0f06fff62"}}
+[debug] [2023-11-12T17:06:19.469Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/859422050410/sites/exercises-app-56/versions/0dc87c2e9041a4d4:populateFiles 200
+[debug] [2023-11-12T17:06:19.469Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/859422050410/sites/exercises-app-56/versions/0dc87c2e9041a4d4:populateFiles {"uploadRequiredHashes":["ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09","ae770bd24b266224fc28ce5878887f5b97766a20a02b3f0a6ce6d615e099a8be","6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9","edb938456c4925cf22c8b1b48aacb7b95635a09af6a5e0b6b22feeb7c3f9e99c","9d362a75f0eeed5b2046b7a517d9e937c26e6913fbe87a56703b1268baacf837","a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5","03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab","601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files"}
+[debug] [2023-11-12T17:06:19.471Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09 [none]
+[debug] [2023-11-12T17:06:19.471Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09 [stream]
+[debug] [2023-11-12T17:06:19.472Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/ae770bd24b266224fc28ce5878887f5b97766a20a02b3f0a6ce6d615e099a8be [none]
+[debug] [2023-11-12T17:06:19.472Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/ae770bd24b266224fc28ce5878887f5b97766a20a02b3f0a6ce6d615e099a8be [stream]
+[debug] [2023-11-12T17:06:19.472Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9 [none]
+[debug] [2023-11-12T17:06:19.472Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9 [stream]
+[debug] [2023-11-12T17:06:19.473Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/edb938456c4925cf22c8b1b48aacb7b95635a09af6a5e0b6b22feeb7c3f9e99c [none]
+[debug] [2023-11-12T17:06:19.473Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/edb938456c4925cf22c8b1b48aacb7b95635a09af6a5e0b6b22feeb7c3f9e99c [stream]
+[debug] [2023-11-12T17:06:19.474Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/9d362a75f0eeed5b2046b7a517d9e937c26e6913fbe87a56703b1268baacf837 [none]
+[debug] [2023-11-12T17:06:19.474Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/9d362a75f0eeed5b2046b7a517d9e937c26e6913fbe87a56703b1268baacf837 [stream]
+[debug] [2023-11-12T17:06:19.475Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5 [none]
+[debug] [2023-11-12T17:06:19.475Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5 [stream]
+[debug] [2023-11-12T17:06:19.476Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab [none]
+[debug] [2023-11-12T17:06:19.476Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab [stream]
+[debug] [2023-11-12T17:06:19.477Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99 [none]
+[debug] [2023-11-12T17:06:19.477Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/0dc87c2e9041a4d4/files/601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99 [stream]
+[debug] [2023-11-12T17:06:19.478Z] [hosting][populate queue][FINAL] {"max":1172,"min":1172,"avg":1172,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1179}
+[debug] [2023-11-12T17:06:19.478Z] [hosting] uploads queued: 8
+[debug] [2023-11-12T17:06:26.765Z] ----------------------------------------------------------------------
+[debug] [2023-11-12T17:06:26.767Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Drilon\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2023-11-12T17:06:26.767Z] CLI Version:   12.8.1
+[debug] [2023-11-12T17:06:26.768Z] Platform:      win32
+[debug] [2023-11-12T17:06:26.768Z] Node Version:  v18.16.0
+[debug] [2023-11-12T17:06:26.769Z] Time:          Sun Nov 12 2023 18:06:26 GMT+0100 (Central European Standard Time)
+[debug] [2023-11-12T17:06:26.769Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-12T17:06:26.840Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-12T17:06:26.842Z] > authorizing via signed-in user (saitid6@gmail.com)
+[debug] [2023-11-12T17:06:26.842Z] [iam] checking project exercises-app-56 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-12T17:06:26.844Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions [none]
+[debug] [2023-11-12T17:06:26.845Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions x-goog-quota-user=projects/exercises-app-56
+[debug] [2023-11-12T17:06:26.845Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-12T17:06:27.835Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions 200
+[debug] [2023-11-12T17:06:27.836Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-12T17:06:27.837Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exercises-app-56 [none]
+[debug] [2023-11-12T17:06:28.264Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exercises-app-56 200
+[debug] [2023-11-12T17:06:28.265Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exercises-app-56 {"projectId":"exercises-app-56","projectNumber":"859422050410","displayName":"exercises-app","name":"projects/exercises-app-56","resources":{"hostingSite":"exercises-app-56"},"state":"ACTIVE","etag":"1_68280dac-1289-4a90-b538-d33dabbe17cd"}
+[info] 
+[info] === Deploying to 'exercises-app-56'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-11-12T17:06:28.270Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/exercises-app-56/versions [none]
+[debug] [2023-11-12T17:06:28.270Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/exercises-app-56/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-11-12T17:06:29.538Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/exercises-app-56/versions 200
+[debug] [2023-11-12T17:06:29.539Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/exercises-app-56/versions {"name":"projects/859422050410/sites/exercises-app-56/versions/f529b2c5adcd4e9c","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[exercises-app-56]: beginning deploy... 
+[info] i  hosting[exercises-app-56]: found 25 files in build 
+[debug] [2023-11-12T17:06:29.549Z] [hosting] uploading with 200 concurrency
+[debug] [2023-11-12T17:06:29.554Z] [hosting] hash cache [YnVpbGQ] stored for 25 files
+[debug] [2023-11-12T17:06:29.554Z] [hosting][hash queue][FINAL] {"max":3,"min":1,"avg":1,"active":0,"complete":25,"success":25,"errored":0,"retried":0,"total":25,"elapsed":4}
+[debug] [2023-11-12T17:06:29.555Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/859422050410/sites/exercises-app-56/versions/f529b2c5adcd4e9c:populateFiles [none]
+[debug] [2023-11-12T17:06:29.555Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/859422050410/sites/exercises-app-56/versions/f529b2c5adcd4e9c:populateFiles {"files":{"/asset-manifest.json":"62a62d84671be1d9f2b218dc8da7763459bbe1d6fce67d5401c8758aea63c885","/bulgarian-split - Trim.mp4":"edb938456c4925cf22c8b1b48aacb7b95635a09af6a5e0b6b22feeb7c3f9e99c","/bulgariansplit.mp4":"928e6f22602187eb46e932b894cf32c705522bf6a090fc2a6f699865a73a7e80","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/fire-hydrants - Trim.mp4":"6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9","/glutes-birdge - Trim.mp4":"601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99","/hip thruts.mp4":"9d362a75f0eeed5b2046b7a517d9e937c26e6913fbe87a56703b1268baacf837","/hipthrutsreal.mp4":"03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab","/index.html":"3fa8c19d67b10564003cd17a79f71bda944319e8fb464f16cb54ebbd790d6ed5","/kickbacks.png":"794183cfe3a5c0b4be859fa30278f25c269ea0c5e87b750e6be525909f9c6a01","/last-three.mp3":"b2afe20ea6ad5205f6d2e0d23bf8990ea6884bfe282dcf58cf327a684d986995","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/romanian-deadlift - Trim.mp4":"ae770bd24b266224fc28ce5878887f5b97766a20a02b3f0a6ce6d615e099a8be","/side.mp4":"a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5","/stepups.mp4":"ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09","/static/css/main.0d46b285.css":"224295d2a6fd7d717375701087606cbda7797c483e7e156b0bc2c99db9e09094","/static/css/main.0d46b285.css.map":"70cf67475de07d8f988d9e5d54d22696e43e8c8578b86b0524b931b4f9295294","/static/js/787.49b3cd8f.chunk.js":"54f5dbb82c4fb36e6ec56691aa7c64a146a87a0bebb1f8f29c96e0ccf0042c0a","/static/js/787.49b3cd8f.chunk.js.map":"6c6b020f8849b7915dc46e7dd57f44e3e92b9e54f570e30ef2caf027f8084897","/static/js/main.46dcc8f0.js":"ca4b91170d98b986d73f76f96c4efe247fd76f9eac03ddff069df49152c43957","/static/js/main.46dcc8f0.js.LICENSE.txt":"e4bfa3d89c21846820163621ed2d1d79fb8f253962410109d054bad3fd090696","/static/js/main.46dcc8f0.js.map":"e89250b11b70c06875dfd2a0d32f122c102fe007c47a368b1bee77a0f06fff62"}}
+[debug] [2023-11-12T17:06:30.708Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/859422050410/sites/exercises-app-56/versions/f529b2c5adcd4e9c:populateFiles 200
+[debug] [2023-11-12T17:06:30.708Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/859422050410/sites/exercises-app-56/versions/f529b2c5adcd4e9c:populateFiles {"uploadRequiredHashes":["ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09","edb938456c4925cf22c8b1b48aacb7b95635a09af6a5e0b6b22feeb7c3f9e99c","601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99","9d362a75f0eeed5b2046b7a517d9e937c26e6913fbe87a56703b1268baacf837","a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5","ae770bd24b266224fc28ce5878887f5b97766a20a02b3f0a6ce6d615e099a8be","03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab","6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files"}
+[debug] [2023-11-12T17:06:30.711Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09 [none]
+[debug] [2023-11-12T17:06:30.711Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09 [stream]
+[debug] [2023-11-12T17:06:30.712Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/edb938456c4925cf22c8b1b48aacb7b95635a09af6a5e0b6b22feeb7c3f9e99c [none]
+[debug] [2023-11-12T17:06:30.713Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/edb938456c4925cf22c8b1b48aacb7b95635a09af6a5e0b6b22feeb7c3f9e99c [stream]
+[debug] [2023-11-12T17:06:30.714Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99 [none]
+[debug] [2023-11-12T17:06:30.714Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99 [stream]
+[debug] [2023-11-12T17:06:30.715Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/9d362a75f0eeed5b2046b7a517d9e937c26e6913fbe87a56703b1268baacf837 [none]
+[debug] [2023-11-12T17:06:30.715Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/9d362a75f0eeed5b2046b7a517d9e937c26e6913fbe87a56703b1268baacf837 [stream]
+[debug] [2023-11-12T17:06:30.717Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5 [none]
+[debug] [2023-11-12T17:06:30.717Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5 [stream]
+[debug] [2023-11-12T17:06:30.718Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/ae770bd24b266224fc28ce5878887f5b97766a20a02b3f0a6ce6d615e099a8be [none]
+[debug] [2023-11-12T17:06:30.718Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/ae770bd24b266224fc28ce5878887f5b97766a20a02b3f0a6ce6d615e099a8be [stream]
+[debug] [2023-11-12T17:06:30.719Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab [none]
+[debug] [2023-11-12T17:06:30.720Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab [stream]
+[debug] [2023-11-12T17:06:30.749Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9 [none]
+[debug] [2023-11-12T17:06:30.750Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9 [stream]
+[debug] [2023-11-12T17:06:30.751Z] [hosting][populate queue][FINAL] {"max":1158,"min":1158,"avg":1158,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1198}
+[debug] [2023-11-12T17:06:30.751Z] [hosting] uploads queued: 8
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[debug] [2023-11-12T17:07:01.138Z] [uploadQueue] Retrying task ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09
+[debug] [2023-11-12T17:07:01.139Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09 [none]
+[debug] [2023-11-12T17:07:01.139Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09 [stream]
+[debug] [2023-11-12T17:07:01.141Z] [uploadQueue] Retrying task 601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99
+[debug] [2023-11-12T17:07:01.142Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99 [none]
+[debug] [2023-11-12T17:07:01.142Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99 [stream]
+[debug] [2023-11-12T17:07:01.144Z] [uploadQueue] Retrying task a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5
+[debug] [2023-11-12T17:07:01.144Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5 [none]
+[debug] [2023-11-12T17:07:01.145Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5 [stream]
+[debug] [2023-11-12T17:07:01.148Z] [uploadQueue] Retrying task 03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab
+[debug] [2023-11-12T17:07:01.149Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab [none]
+[debug] [2023-11-12T17:07:01.149Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab [stream]
+[debug] [2023-11-12T17:07:01.169Z] [uploadQueue] Retrying task 6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9
+[debug] [2023-11-12T17:07:01.170Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9 [none]
+[debug] [2023-11-12T17:07:01.170Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/f529b2c5adcd4e9c/files/6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9 [stream]
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[debug] [2023-11-12T17:10:30.950Z] ----------------------------------------------------------------------
+[debug] [2023-11-12T17:10:30.952Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Drilon\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --debug
+[debug] [2023-11-12T17:10:30.952Z] CLI Version:   12.8.1
+[debug] [2023-11-12T17:10:30.953Z] Platform:      win32
+[debug] [2023-11-12T17:10:30.953Z] Node Version:  v18.16.0
+[debug] [2023-11-12T17:10:30.954Z] Time:          Sun Nov 12 2023 18:10:30 GMT+0100 (Central European Standard Time)
+[debug] [2023-11-12T17:10:30.954Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-12T17:10:31.024Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-12T17:10:31.026Z] > authorizing via signed-in user (saitid6@gmail.com)
+[debug] [2023-11-12T17:10:31.026Z] [iam] checking project exercises-app-56 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-12T17:10:31.028Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions [none]
+[debug] [2023-11-12T17:10:31.028Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions x-goog-quota-user=projects/exercises-app-56
+[debug] [2023-11-12T17:10:31.029Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-12T17:10:32.044Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions 200
+[debug] [2023-11-12T17:10:32.044Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exercises-app-56:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-12T17:10:32.045Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exercises-app-56 [none]
+[debug] [2023-11-12T17:10:32.693Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exercises-app-56 200
+[debug] [2023-11-12T17:10:32.694Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exercises-app-56 {"projectId":"exercises-app-56","projectNumber":"859422050410","displayName":"exercises-app","name":"projects/exercises-app-56","resources":{"hostingSite":"exercises-app-56"},"state":"ACTIVE","etag":"1_68280dac-1289-4a90-b538-d33dabbe17cd"}
+[info] 
+[info] === Deploying to 'exercises-app-56'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-11-12T17:10:32.700Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/exercises-app-56/versions [none]
+[debug] [2023-11-12T17:10:32.700Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/exercises-app-56/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-11-12T17:10:34.124Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/exercises-app-56/versions 200
+[debug] [2023-11-12T17:10:34.125Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/exercises-app-56/versions {"name":"projects/859422050410/sites/exercises-app-56/versions/46c1a2bc65d668af","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[exercises-app-56]: beginning deploy... 
+[info] i  hosting[exercises-app-56]: found 25 files in build 
+[debug] [2023-11-12T17:10:34.136Z] [hosting] uploading with 200 concurrency
+[debug] [2023-11-12T17:10:34.141Z] [hosting] hash cache [YnVpbGQ] stored for 25 files
+[debug] [2023-11-12T17:10:34.141Z] [hosting][hash queue][FINAL] {"max":3,"min":1,"avg":1,"active":0,"complete":25,"success":25,"errored":0,"retried":0,"total":25,"elapsed":4}
+[debug] [2023-11-12T17:10:34.141Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/859422050410/sites/exercises-app-56/versions/46c1a2bc65d668af:populateFiles [none]
+[debug] [2023-11-12T17:10:34.142Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/859422050410/sites/exercises-app-56/versions/46c1a2bc65d668af:populateFiles {"files":{"/asset-manifest.json":"62a62d84671be1d9f2b218dc8da7763459bbe1d6fce67d5401c8758aea63c885","/bulgarian-split - Trim.mp4":"edb938456c4925cf22c8b1b48aacb7b95635a09af6a5e0b6b22feeb7c3f9e99c","/bulgariansplit.mp4":"928e6f22602187eb46e932b894cf32c705522bf6a090fc2a6f699865a73a7e80","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/fire-hydrants - Trim.mp4":"6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9","/glutes-birdge - Trim.mp4":"601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99","/hip thruts.mp4":"9d362a75f0eeed5b2046b7a517d9e937c26e6913fbe87a56703b1268baacf837","/hipthrutsreal.mp4":"03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab","/index.html":"3fa8c19d67b10564003cd17a79f71bda944319e8fb464f16cb54ebbd790d6ed5","/kickbacks.png":"794183cfe3a5c0b4be859fa30278f25c269ea0c5e87b750e6be525909f9c6a01","/last-three.mp3":"b2afe20ea6ad5205f6d2e0d23bf8990ea6884bfe282dcf58cf327a684d986995","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/romanian-deadlift - Trim.mp4":"ae770bd24b266224fc28ce5878887f5b97766a20a02b3f0a6ce6d615e099a8be","/side.mp4":"a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5","/stepups.mp4":"ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09","/static/css/main.0d46b285.css":"224295d2a6fd7d717375701087606cbda7797c483e7e156b0bc2c99db9e09094","/static/css/main.0d46b285.css.map":"70cf67475de07d8f988d9e5d54d22696e43e8c8578b86b0524b931b4f9295294","/static/js/787.49b3cd8f.chunk.js":"54f5dbb82c4fb36e6ec56691aa7c64a146a87a0bebb1f8f29c96e0ccf0042c0a","/static/js/787.49b3cd8f.chunk.js.map":"6c6b020f8849b7915dc46e7dd57f44e3e92b9e54f570e30ef2caf027f8084897","/static/js/main.46dcc8f0.js":"ca4b91170d98b986d73f76f96c4efe247fd76f9eac03ddff069df49152c43957","/static/js/main.46dcc8f0.js.LICENSE.txt":"e4bfa3d89c21846820163621ed2d1d79fb8f253962410109d054bad3fd090696","/static/js/main.46dcc8f0.js.map":"e89250b11b70c06875dfd2a0d32f122c102fe007c47a368b1bee77a0f06fff62"}}
+[debug] [2023-11-12T17:10:35.479Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/859422050410/sites/exercises-app-56/versions/46c1a2bc65d668af:populateFiles 200
+[debug] [2023-11-12T17:10:35.479Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/859422050410/sites/exercises-app-56/versions/46c1a2bc65d668af:populateFiles {"uploadRequiredHashes":["601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99","9d362a75f0eeed5b2046b7a517d9e937c26e6913fbe87a56703b1268baacf837","a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5","edb938456c4925cf22c8b1b48aacb7b95635a09af6a5e0b6b22feeb7c3f9e99c","ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09","6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9","03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab","ae770bd24b266224fc28ce5878887f5b97766a20a02b3f0a6ce6d615e099a8be"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files"}
+[debug] [2023-11-12T17:10:35.482Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99 [none]
+[debug] [2023-11-12T17:10:35.482Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/601f9b22247665c52385cb72f7c3c99b743ab3bf613f17297b7a9bd18e361b99 [stream]
+[debug] [2023-11-12T17:10:35.483Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/9d362a75f0eeed5b2046b7a517d9e937c26e6913fbe87a56703b1268baacf837 [none]
+[debug] [2023-11-12T17:10:35.483Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/9d362a75f0eeed5b2046b7a517d9e937c26e6913fbe87a56703b1268baacf837 [stream]
+[debug] [2023-11-12T17:10:35.484Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5 [none]
+[debug] [2023-11-12T17:10:35.485Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/a28d4d422f22783d5f2cb596e2ea3d8dc349afc1e672fcc55ec26504177165a5 [stream]
+[debug] [2023-11-12T17:10:35.485Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/edb938456c4925cf22c8b1b48aacb7b95635a09af6a5e0b6b22feeb7c3f9e99c [none]
+[debug] [2023-11-12T17:10:35.486Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/edb938456c4925cf22c8b1b48aacb7b95635a09af6a5e0b6b22feeb7c3f9e99c [stream]
+[debug] [2023-11-12T17:10:35.486Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09 [none]
+[debug] [2023-11-12T17:10:35.487Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/ce3ef140ba21244637a7b35d4a94a58f729a6d6fa65dedf51121e35725de6f09 [stream]
+[debug] [2023-11-12T17:10:35.488Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9 [none]
+[debug] [2023-11-12T17:10:35.488Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/6b935535c0cf525fba149d364296d0b5c5b4728855f497ff599abaa6a264d0d9 [stream]
+[debug] [2023-11-12T17:10:35.489Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab [none]
+[debug] [2023-11-12T17:10:35.489Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/03eeaf27f990b7baddd61495c4461730d36ea845818c998c8c313bdeb8ba88ab [stream]
+[debug] [2023-11-12T17:10:35.490Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/ae770bd24b266224fc28ce5878887f5b97766a20a02b3f0a6ce6d615e099a8be [none]
+[debug] [2023-11-12T17:10:35.490Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/exercises-app-56/versions/46c1a2bc65d668af/files/ae770bd24b266224fc28ce5878887f5b97766a20a02b3f0a6ce6d615e099a8be [stream]
+[debug] [2023-11-12T17:10:35.491Z] [hosting][populate queue][FINAL] {"max":1342,"min":1342,"avg":1342,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1351}
+[debug] [2023-11-12T17:10:35.491Z] [hosting] uploads queued: 8
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
+[info] i  hosting: uploading new files [0/8] (0%) 
